@@ -1,0 +1,368 @@
+/* =========================================================================
+   1. VARIABLES GLOBALES Y PALETA DE COLORES INSTITUCIONAL
+   ========================================================================= */
+:root {
+  /* Colores principales de la marca */
+  --verde-principal: #00A86B; /* Verde corporativo para acentos y bordes */
+  --verde-fondo-boton: #7CE26B; /* Verde claro para botones */
+  --amarillo-boton: #D4E73B;    /* Amarillo para el gradiente de botones */
+  
+  /* Colores neutros para fondos y textos */
+  --blanco: #FFFFFF;           /* Fondo blanco para tarjetas y campos */
+  --gris-oscuro: #333333;      /* Texto principal oscuro */
+  --gris-fondo: #F4F6F6;       /* Fondo general gris claro */
+  --rojo-error: #E74C3C;       /* Rojo para mensajes de error */
+  --gris-input: #E2E4E4;       /* Fondo gris suave para inputs */
+}
+
+/* =========================================================================
+   2. CONFIGURACIÓN BASE Y RESETEO DE ESTILOS
+   ========================================================================= */
+* {
+  margin: 0;                   /* Elimina márgenes por defecto */
+  padding: 0;                  /* Elimina rellenos por defecto */
+  box-sizing: border-box;      /* Incluye padding en el cálculo de ancho */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente limpia */
+}
+
+/* Estructura general del cuerpo */
+body {
+  background-color: var(--gris-fondo);
+  color: var(--gris-oscuro);
+  min-height: 100vh;           /* Ocupa toda la pantalla */
+  display: flex;
+  flex-direction: column;      /* Organiza header, main y footer en columna */
+  justify-content: space-between; /* Footer siempre abajo */
+  position: relative;          /* Permite ubicar elementos decorativos */
+  overflow-x: hidden;          /* Evita scroll horizontal */
+}
+
+/* =========================================================================
+   3. MAQUETACIÓN DEL HEADER CURVO
+   ========================================================================= */
+.header-curve-bg {
+  width: 100%;
+  height: 280px;               /* Altura del encabezado */
+  background: linear-gradient(135deg, #BFF04E 0%, #6AD86A 60%, #00A86B 100%); /* Gradiente institucional */
+  border-bottom-left-radius: 50% 40px; /* Curva inferior izquierda */
+  border-bottom-right-radius: 50% 40px; /* Curva inferior derecha */
+  display: flex;
+  justify-content: center;     /* Centra el logo horizontalmente */
+  align-items: center;         /* Centra el logo verticalmente */
+  position: absolute;          /* Se fija arriba */
+  top: 0;
+  left: 0;
+  z-index: 1;                  /* Encima del fondo */
+}
+
+/* Caja blanca que contiene el logo */
+.brand-logo-wrapper {
+  background-color: var(--blanco);
+  padding: 12px 20px;          /* Espaciado interno */
+  border-radius: 16px;         /* Bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra ligera */
+}
+
+/* Imagen del logo */
+.main-logo-img {
+  max-width: 260px;            /* Tamaño máximo */
+  height: auto;                /* Mantiene proporción */
+  display: block;
+}
+
+/* =========================================================================
+   4. BURBUJAS DECORATIVAS
+   ========================================================================= */
+.bubble {
+  position: absolute;          /* Ubicación libre */
+  background: radial-gradient(circle, rgba(168,224,99,0.5) 0%, rgba(0,168,107,0.15) 100%);
+  border-radius: 50%;          /* Forma circular */
+  z-index: 0;                  /* Al fondo */
+}
+
+/* Posiciones de las burbujas */
+.bubble-1 { width: 35px; height: 35px; top: 460px; left: 25px; }
+.bubble-2 { width: 28px; height: 28px; top: 580px; right: 20px; }
+.bubble-3 { width: 50px; height: 50px; bottom: 120px; left: 30px; }
+
+/* =========================================================================
+   5. CONTENEDOR CENTRAL Y FORMULARIO
+   ========================================================================= */
+.main-auth {
+  width: 100%;
+  max-width: 400px;            /* Ancho tipo móvil */
+  margin: 240px auto 30px auto; /* Margen superior para no tapar el logo */
+  padding: 0 24px;
+  z-index: 2;                  /* Encima del fondo */
+}
+
+.auth-container {
+  width: 100%;
+  text-align: center;          /* Centra títulos y textos */
+}
+
+.welcome-title {
+  font-size: 32px;             /* Título grande */
+  font-weight: 700;            /* Negrita */
+  color: #444444;
+  margin-bottom: 30px;         /* Separación con los inputs */
+}
+
+/* =========================================================================
+   6. CAMPOS DE ENTRADA
+   ========================================================================= */
+.form-group {
+  margin-bottom: 22px;         /* Espaciado entre campos */
+  text-align: left;            /* Etiquetas alineadas a la izquierda */
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 18px;                  /* Ícono dentro del input */
+  font-size: 18px;
+  color: #666666;
+  pointer-events: none;        /* No bloquea el clic */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+select,
+textarea {
+  width: 100%;
+  padding: 14px 16px 14px 48px; /* Espacio para ícono */
+  font-size: 16px;
+  border: 1px solid transparent;
+  border-radius: 25px;         /* Forma de píldora */
+  background-color: var(--gris-input);
+  color: var(--gris-oscuro);
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input::placeholder {
+  color: #7A7A7A;              /* Color del texto guía */
+}
+
+input:focus, select:focus, textarea:focus {
+  background-color: var(--blanco);
+  border-color: var(--verde-principal);
+  box-shadow: 0 0 10px rgba(0, 168, 107, 0.15);
+}
+
+textarea {
+  padding: 14px 16px;
+  border-radius: 14px;
+  resize: vertical;            /* Permite agrandar hacia abajo */
+}
+
+.error-message {
+  color: var(--rojo-error);
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 5px;
+  padding-left: 15px;
+  display: none;               /* Se activa con JS */
+}
+
+/* =========================================================================
+   7. ENLACES SECUNDARIOS
+   ========================================================================= */
+.form-options {
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 25px;
+}
+
+.forgot-pass-link, .auth-switch p {
+  font-size: 14px;
+  color: #333333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-switch {
+  margin-top: 25px;
+}
+
+.auth-switch a {
+  color: var(--verde-principal);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* =========================================================================
+   8. BOTÓN PRINCIPAL
+   ========================================================================= */
+.btn-submit {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #444444;
+  background: linear-gradient(to right, var(--amarillo-boton) 0%, var(--verde-fondo-boton) 100%);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(124, 226, 107, 0.4);
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.btn-submit:hover {
+  box-shadow: 0 7px 20px rgba(124, 226, 107, 0.6);
+  transform: translateY(-1px);
+}
+
+.btn-submit:active {
+  transform: translateY(1px);
+}
+
+/* =========================================================================
+   9. CUADRO DE ÉXITO
+   ========================================================================= */
+.visual-success {
+  background-color: #2ECC71;
+  color: var(--blanco);
+  padding: 15px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.2);
+  display: none;               /* Se activa con JS */
+}
+/* Estilos específicos para postulaciones (basados en tu imagen) */
+.offers-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.offers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    gap: 28px;
+}
+
+.offer-card {
+    background: white;
+    border-radius: 16px;
+    padding: 26px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.badge {
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 14px;
+}
+
+.badge-mascotas { background: #00A86B; color: white; }
+.badge-gatos   { background: #D4E73B; color: #333; }
+.badge-finca   { background: #7CE26B; color: #333; }
+
+.offer-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.description {
+    color: #555;
+    line-height: 1.55;
+    margin-bottom: 20px;
+}
+
+.dates {
+    background: #f8faf9;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+}
+
+.dates div {
+    margin: 8px 0;
+    font-size: 0.97rem;
+}
+
+.icon-date {
+    margin-right: 8px;
+    color: #00A86B;
+}
+
+.btn-primary, .btn-outline {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.05rem;
+    border-radius: 50px;
+    font-weight: 600;
+}
+/* =========================================================================
+   ESTILO UNIFICADO PARA TODOS LOS CAMPOS DE ENTRADA (INCLUYE TELÉFONO)
+   ========================================================================= */
+
+/* Aplica el mismo diseño tipo píldora a todos los inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"], /* ← Se agrega aquí el campo de teléfono */
+input[type="date"],
+select,
+textarea {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 14px 16px 14px 48px; /* Espaciado interno uniforme con espacio para ícono */
+  font-size: 16px; /* Tamaño de texto legible */
+  border: 1px solid transparent; /* Borde invisible por defecto */
+  border-radius: 25px; /* Bordes redondeados tipo píldora */
+  background-color: var(--gris-input); /* Fondo gris claro */
+  color: var(--gris-oscuro); /* Texto oscuro */
+  outline: none; /* Quita el borde azul del navegador */
+  transition: all 0.3s ease; /* Animación suave al enfocar */
+}
+
+/* Placeholder (texto guía dentro del campo) */
+input::placeholder {
+  color: #7A7A7A; /* Color gris intermedio */
+}
+
+/* Efecto visual al enfocar el campo */
+input:focus, select:focus, textarea:focus {
+  background-color: var(--blanco); /* Fondo blanco al escribir */
+  border-color: var(--verde-principal); /* Borde verde institucional */
+  box-shadow: 0 0 10px rgba(0, 168, 107, 0.15); /* Sombra verde suave */
+}
+
+/* =========================================================================
+   ÍCONO DECORATIVO PARA EL CAMPO DE TELÉFONO (OPCIONAL)
+   ========================================================================= */
+
+/* Si quieres agregar un ícono de teléfono dentro del campo */
+.input-icon-phone {
+  position: absolute;
+  left: 18px; /* Distancia desde el borde izquierdo */
+  font-size: 18px;
+  color: #666666; /* Gris medio */
+  pointer-events: none; /* No bloquea el clic */
+}
+
+/* =========================================================================
+   10. PANELES
+
+

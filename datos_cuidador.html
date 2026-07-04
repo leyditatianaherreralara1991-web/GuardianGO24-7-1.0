@@ -1,0 +1,79 @@
+<!DOCTYPE html> <!-- Indica que el documento usa HTML5 -->
+<html lang="es"> <!-- Define el idioma principal como español -->
+<head>
+    <meta charset="UTF-8"> <!-- Codificación para caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace la página responsiva -->
+    <title>Guardian Go 24/7 - Datos del Cuidador</title> <!-- Título de la pestaña -->
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula la hoja de estilos institucional -->
+</head>
+
+<body>
+    <!-- Encabezado superior con gradiente verde institucional -->
+    <header class="header-gradient">
+        <div class="header-content">
+            <div class="logo-container">
+                <!-- Logo completo de Guardian Go 24/7 -->
+                <img src="logo.png" alt="Logo Guardian Go 24/7" class="main-logo-img"> <!-- Imagen del logo -->
+            </div>
+            <h1>Completa tu Perfil de Postulación</h1> <!-- Título principal -->
+            <p class="subtitle">Ingresa tus datos para que el anfitrión pueda evaluar tu perfil</p> <!-- Subtítulo descriptivo -->
+        </div>
+    </header>
+
+    <!-- Contenedor principal del formulario -->
+    <main class="offers-container">
+        <div class="offers-grid"> <!-- Grilla que mantiene el estilo de las tarjetas de postulaciones -->
+
+            <!-- Tarjeta de formulario -->
+            <div class="offer-card">
+                <span class="badge badge-cuidador">DATOS DEL CUIDADOR</span> <!-- Etiqueta superior -->
+                <h3>Información Personal</h3> <!-- Título de la tarjeta -->
+                <p class="description">Por favor completa los siguientes campos obligatorios:</p> <!-- Texto guía -->
+
+                <!-- Formulario de datos del cuidador -->
+                <form id="cuidadorForm">
+                    <!-- Campo: Nombre completo -->
+                    <div class="input-group">
+                        <label for="nombreCuidador">Nombre completo</label>
+                        <input type="text" id="nombreCuidador" placeholder="Ej. Juan Pérez" required>
+                    </div>
+
+                    <!-- Campo: Teléfono de contacto -->
+<div class="form-group"> <!-- Contenedor del campo -->
+  <label for="telefono">Teléfono de contacto</label> <!-- Etiqueta descriptiva -->
+  
+  <!-- Contenedor que permite incluir el ícono dentro del input -->
+  <div class="input-with-icon">
+    <span class="input-icon">📞</span> <!-- Ícono decorativo de teléfono -->
+    <input type="tel" id="telefono" placeholder="+57 300 123 4567" required> <!-- Campo de entrada -->
+  </div>
+</div>
+
+
+                    <!-- Campo: Experiencia -->
+                    <div class="input-group">
+                        <label for="experiencia">Experiencia en cuidado</label>
+                        <textarea id="experiencia" rows="5" placeholder="Describe tu experiencia con mascotas, plantas o custodia de hogares..." required></textarea>
+                    </div>
+
+                    <!-- Botón de envío -->
+                    <button type="submit" class="btn-primary">Enviar Datos de Postulación</button>
+                </form>
+
+                <!-- Cuadro de confirmación visual -->
+                <div id="successMessage" class="success-box" style="display: none;">
+                    ✅ Datos enviados correctamente. Tu postulación ha sido registrada.
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página institucional -->
+    <footer>
+        <p>© 2026 Guardian Go 24/7. Proyecto desarrollado por Thomas Cortes y Tatiana Herrera | Ficha técnica 3186631</p>
+    </footer>
+
+    <!-- Archivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>

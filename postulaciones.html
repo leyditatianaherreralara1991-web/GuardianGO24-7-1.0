@@ -1,0 +1,88 @@
+<!DOCTYPE html> <!-- Documento HTML5 -->
+<html lang="es"> <!-- Idioma principal español -->
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño responsivo -->
+    <title>Guardian Go 24/7 - Postulaciones</title> <!-- Título de la pestaña -->
+    <link rel="stylesheet" href="styles.css"> <!-- Vincula la hoja de estilos -->
+</head>
+
+<body>
+    <!-- Encabezado superior -->
+    <header class="header-gradient">
+        <div class="header-content">
+            <div class="logo-container">
+                <!-- Logo SVG del proyecto -->
+                <svg width="65" height="65" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M40 120 L40 80 L100 40 L160 80 L160 120 Z" fill="#00A86B"/> <!-- Casa -->
+                    <rect x="70" y="100" width="60" height="60" fill="#FFFFFF"/> <!-- Ventana -->
+                    <circle cx="30" cy="70" r="25" fill="#7CE26B"/> <!-- Árbol izquierdo -->
+                    <circle cx="170" cy="65" r="22" fill="#7CE26B"/> <!-- Árbol derecho -->
+                </svg>
+            </div>
+            <div>
+                <h1>Solicitudes de Cuidado</h1> <!-- Título principal -->
+                <p class="subtitle">Revisa los requerimientos de los anfitriones</p> <!-- Subtítulo -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenedor principal -->
+    <main class="offers-container">
+        <div class="offers-grid"> <!-- Grilla de tarjetas -->
+
+            <!-- Tarjeta 1 -->
+            <div class="offer-card">
+                <span class="badge badge-mascotas">MASCOTAS Y HOGAR</span>
+                <h3>Cuidado de Golden Retriever en apartamento</h3>
+                <p class="description">
+                    Busco cuidador responsable para sacarlo a pasear dos veces al día durante mi viaje de negocios.
+                </p>
+                <div class="dates">
+                    <div><span class="icon-date">📅</span> <strong>Inicio:</strong> 15 de Julio, 2026</div>
+                    <div><span class="icon-date">📅</span> <strong>Fin:</strong> 22 de Julio, 2026</div>
+                </div>
+                <!-- Botón conectado a applyToJob -->
+                <button onclick="applyToJob('Oferta #104 - Cuidado de Golden Retriever')" class="btn-primary">Postularme</button>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="offer-card">
+                <span class="badge badge-finca">CUIDADO EN FINCA</span>
+                <h3>Mantenimiento básico y cuidado general de finca</h3>
+                <p class="description">
+                    Se solicita cuidador con conocimientos básicos en jardinería para mantener el jardín y cuidar las plantas durante la ausencia del propietario.
+                </p>
+                <div class="dates">
+                    <div><span class="icon-date">📅</span> <strong>Inicio:</strong> 01 de Agosto, 2026</div>
+                    <div><span class="icon-date">📅</span> <strong>Fin:</strong> 10 de Agosto, 2026</div>
+                </div>
+                <button onclick="applyToJob('Oferta #105 - Cuidado general en finca')" class="btn-outline">Postularme</button>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="offer-card">
+                <span class="badge badge-gatos">CUIDADO DE GATOS</span>
+                <h3>Alimentación y compañía para dos gatos persas</h3>
+                <p class="description">
+                    Solicito cuidador para asistir a mi hogar de manera diaria, limpiar cajas de arena y suministrar alimento a dos gatitos muy dóciles por viaje familiar de fin de semana.
+                </p>
+                <div class="dates">
+                    <div><span class="icon-date">📅</span> <strong>Inicio:</strong> 18 de Julio, 2026</div>
+                    <div><span class="icon-date">📅</span> <strong>Fin:</strong> 20 de Julio, 2026</div>
+                </div>
+                <button onclick="applyToJob('Oferta #106 - Cuidado de gatos persas')" class="btn-outline">Postularme</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2026 Guardian Go 24/7. Proyecto desarrollado por Thomas Cortes y Tatiana Herrera | Ficha técnica 3186631</p>
+    </footer>
+<!-- Script externo -->
+<script src="script.js"></script>
+</body>
+</html>
+
+

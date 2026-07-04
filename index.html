@@ -1,0 +1,76 @@
+<!DOCTYPE html> <!-- Indica que el documento está escrito en HTML5 -->
+<html lang="es"> <!-- Define que el idioma principal del contenido es español -->
+<head>
+  <meta charset="UTF-8"> <!-- Codificación de caracteres UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la página sea responsiva en móviles -->
+  <title>Guardian Go 24/7 - Iniciar Sesión</title> <!-- Título que aparece en la pestaña del navegador -->
+  <link rel="stylesheet" href="styles.css"> <!-- Vincula el archivo externo de estilos CSS -->
+</head>
+<body>
+  <!-- Fondo superior con color degradado -->
+  <div class="header-curve-bg"> <!-- Contenedor del encabezado -->
+    <div class="brand-logo-wrapper"> <!-- Contenedor del logo -->
+      <img src="logo.png" alt="Logo oficial de Guardian Go 24/7" class="main-logo-img"> <!-- Imagen del logo -->
+    </div>
+  </div>
+
+  <!-- Burbujas decorativas -->
+  <div class="bubble bubble-1" aria-hidden="true"></div>
+  <div class="bubble bubble-2" aria-hidden="true"></div>
+  <div class="bubble bubble-3" aria-hidden="true"></div>
+
+  <!-- Contenido principal -->
+  <main class="main-auth"> <!-- Sección principal del formulario -->
+    <div class="auth-container"> <!-- Contenedor del formulario -->
+      <h2 class="welcome-title">¡Bienvenido!</h2> <!-- Título de bienvenida -->
+
+      <!-- Formulario de inicio de sesión -->
+      <form id="loginForm" novalidate> <!-- novalidate desactiva la validación automática del navegador -->
+        
+        <!-- Campo: Correo electrónico -->
+        <div class="form-group">
+          <label for="loginEmail">Correo Electrónico</label>
+          <div class="input-with-icon">
+            <span class="input-icon" aria-hidden="true">✉️</span> <!-- Icono decorativo -->
+            <input type="email" id="loginEmail" placeholder="hola@gmail.com" aria-label="Ingresa tu correo electrónico" required> <!-- Campo obligatorio tipo email -->
+          </div>
+          <div class="error-message" id="loginEmailError" role="alert"></div> <!-- Mensaje de error para el correo -->
+        </div>
+
+        <!-- Campo: Contraseña -->
+        <div class="form-group">
+          <label for="loginPassword">Contraseña</label>
+          <div class="input-with-icon">
+            <span class="input-icon" aria-hidden="true">🔑</span> <!-- Icono decorativo -->
+            <input type="password" id="loginPassword" placeholder="Contraseña" aria-label="Ingresa tu contraseña" required> <!-- Campo obligatorio tipo contraseña -->
+          </div>
+          <div class="error-message" id="loginPasswordError" role="alert"></div> <!-- Mensaje de error para la contraseña -->
+        </div>
+
+        <!-- Enlace de recuperación -->
+        <div class="form-options">
+          <a href="#" class="forgot-pass-link">¿Olvidaste tu contraseña?</a>
+        </div>
+
+        <!-- Botón de envío -->
+        <button type="submit" class="btn-submit" aria-label="Iniciar sesión en Guardian Go">Iniciar sesión</button>
+      </form>
+
+      <!-- Enlace para registro -->
+      <div class="auth-switch">
+        <p>¿Aún no tienes una cuenta? <a href="registro.html">Únete aquí</a></p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>&copy; 2026 Guardian Go 24/7. Proyecto desarrollado por Thomas Cortes y Tatiana Herrera | Ficha técnica 3186631</p>
+  </footer>
+
+  <!-- Archivo JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+

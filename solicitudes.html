@@ -1,0 +1,87 @@
+<!DOCTYPE html> <!-- Documento HTML5 -->
+<html lang="es"> <!-- Idioma principal español -->
+<head>
+  <meta charset="UTF-8"> <!-- Codificación de caracteres -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Diseño responsivo -->
+  <title>Guardian Go 24/7 - Crear Solicitud (Anfitrión)</title> <!-- Título de la pestaña -->
+  <link rel="stylesheet" href="styles.css"> <!-- Vincula la hoja de estilos institucional -->
+</head>
+
+<body>
+  <!-- Contenedor principal -->
+  <main class="offers-container">
+    <div class="offers-grid"> <!-- Grilla que mantiene el estilo de las tarjetas -->
+
+      <!-- Tarjeta de creación de solicitud -->
+      <div class="offer-card"> <!-- Caja principal con sombra y bordes redondeados -->
+
+        <!-- Logo centrado arriba de la tarjeta -->
+        <div class="logo-container" style="text-align: center; margin-bottom: 20px;">
+          <img src="logo.png" alt="Logo Guardian Go 24/7" class="main-logo-img"> <!-- Imagen del logo -->
+        </div>
+
+        <!-- Etiqueta superior -->
+        <span class="badge badge-anfitrion">CREAR SOLICITUD</span>
+
+        <!-- Título y descripción -->
+        <h3>Nueva Solicitud de Cuidado</h3>
+        <p class="description">Completa los siguientes campos para publicar tu solicitud en el sistema.</p>
+
+        <!-- Formulario de creación -->
+        <form id="requestForm" novalidate> <!-- novalidate evita validación automática del navegador -->
+
+          <!-- Campo: Título -->
+          <div class="input-group">
+            <label for="requestTitle">Título de la Solicitud</label>
+            <input type="text" id="requestTitle" placeholder="Ej. Cuidado de Perrito y Riego de Plantas en fin de semana" required>
+            <div class="error-message" id="titleError" role="alert"></div>
+          </div>
+
+          <!-- Campo: Descripción -->
+          <div class="input-group">
+            <label for="requestDesc">Descripción Detallada</label>
+            <textarea id="requestDesc" rows="5" placeholder="Describe las necesidades de tu hogar, mascota o plantas..." required></textarea>
+            <div class="error-message" id="descError" role="alert"></div>
+          </div>
+
+          <!-- Campos de fechas -->
+          <div class="date-row">
+            <!-- Fecha de inicio -->
+            <div class="input-group flex-date">
+              <label for="startDate">Fecha de Inicio</label>
+              <input type="date" id="startDate" required>
+              <div class="error-message" id="startError" role="alert"></div>
+            </div>
+
+            <!-- Fecha de fin -->
+            <div class="input-group flex-date">
+              <label for="endDate">Fecha de Fin</label>
+              <input type="date" id="endDate" required>
+              <div class="error-message" id="endError" role="alert"></div>
+            </div>
+          </div>
+
+          <!-- Botón de envío -->
+          <button type="submit" class="btn-primary">Publicar Solicitud de Cuidado</button>
+        </form>
+
+        <!-- Cuadro de confirmación visual -->
+        <div id="successMessage" class="success-box" style="display: none;">
+          🚀 Solicitud publicada correctamente. Tu anuncio ha sido enviado al panel de cuidadores.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de página institucional -->
+  <footer>
+    <p>© 2026 Guardian Go 24/7. Proyecto desarrollado por Thomas Cortes y Tatiana Herrera | Ficha técnica 3186631</p>
+  </footer>
+
+  <!-- Archivo JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
